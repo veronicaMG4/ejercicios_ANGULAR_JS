@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="angularApp" ng-controller="mainCtrl">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Angular JS</title>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"> 
+       
+    <!-- Incluir Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Librerias AngularJS 1.7.8 -->
+    <script src="js/lib/angular.1.7.8.min.js"></script>
+    <script src="js/lib/angular-route.1.7.8.min.js"></script>
+
+      <!-- Servicios o Providers -->
+      <script src="js/providers/cancionProvider.js"></script>
+ 
+
+    <!-- Nuestros JavaSctipt para la App -->
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+
+    <!-- Nuestros Controladores -->
+    <script src="js/contratosController.js"></script>
+    <script src="js/promesasController.js"></script>
+    <script src="js/serviciosController.js"></script>
+    <script src="js/crudController.js"></script>
+    <script src="js/mainController.js"></script>
+    <script src="js/detalleController.js"></script>
+    <script src="js/pokemonController.js"></script>
+    
+    
+    <!--servicios y provider-->
+    <script src="js/providers/cancionProvider.js"></script>
+  
+
+    <!-- Nuestros Componentes -->
+    <script src="components/menu/componente.menu.js"></script>
+    <script src="components/boton/componente-boton.js"></script>
+    <script src="components/tabla/componente-tabla.js"></script>
+    <script src="components/filtro/componente-filtro.js"></script>
+    <script src="components/alerta/componente-alert.js"></script>
+
+
+ 
+   
+    
+
+
+</head>
+
+<body>
+
+    <!--
+        <div ng-include="menuSuperior"></div>
+        -->
+
+    <componente-menu></componente-menu>
+    <componente-alert clase="{{alerta.clase}}" texto="{{alerta.texto}}"></componente-alert>
+
+
+
+
+    <div class="container">
+
+        <!-- La pagina principal ira aquí -->
+        <div ng-view></div>
+
+    </div><!-- /.container -->
+
+
+    <!-- scripts vendors -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <ng-include src="'parciales/footer.html'"></ng-include>
+
+</body>
+
+</html>

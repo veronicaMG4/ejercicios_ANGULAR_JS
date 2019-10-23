@@ -1,0 +1,35 @@
+
+{{$ctrl.frutas}}<BR>
+PRECIOS:{{$ctrl.precio}}<BR>
+COLORES:{{$ctrl.colores}}<BR>
+COLORES2:{{$ctrl.colores2}}<BR>
+TOTAL:{{$ctrl.totalEuros}}<BR>
+ <div>
+        Filtro <br>
+        <input type="text" ng-model="busqueda.nombre" placeholder="Nombre de la fruta">
+        <select ng-model="busqueda.color">
+            <option value="">Todos</option>
+            <option value="verde">verdes</option>
+            <option value="marron">marrones</option>
+            <option value="naranja">naranja</option>
+            <option value="rosa">rosa</option>
+        </select>
+      </div>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+        <th scope="col" ng-click="columna = 'id'; orden = !orden;">#</th>
+        <th scope="col"ng-click="columna = 'nombre'; orden = !orden;">Nombre</th>
+        <th scope="col">color</th>
+        
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="fruta in $ctrl.frutas | filter:busqueda | orderBy:columna:orden">
+            <td>{{fruta.id}}</td>
+            <td>{{fruta.nombre}}</td>
+            <td>{{fruta.color}}</td>
+        </tr>
+
+    </tbody>
+</table>

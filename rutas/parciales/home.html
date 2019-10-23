@@ -1,0 +1,73 @@
+<h1>Home</h1>
+<p>1.capitzalizar solo la primera letra de la primera palabra</p>
+  ********{{capitalizar|capitalizar}}<br><br>
+<p>2.capitzalizar por defecto como el anterior ó capitzalizar enviando parametros(posicion de las letras) desde una letra hasta otra</p>
+**********{{capitalizar2|capitalizarEntreMedias2:3:6}} <br><br>
+<p>3.capitalizar todas las palabras de una oracion</p>
+********{{capitalizar3|capitalizePalabras}}<br><br>
+
+<h2>CURSOS</h2>
+<ul>
+    <li><a href="https://docs.angularjs.org/tutorial" target="_blank">Documentacion Oficial</a></li>
+    <li><a href="https://www.cursoangularjs.es" target="_blank">Curso Angular JS</a></li>
+</ul>
+
+
+<p>Pasos para montar el sistema de Routing de AngularJS</p>
+<ol>
+    <li>Descargar e incluir en <b>index.html</b> la libreria <code>angular.route.js</code></li>
+    <li>Definir e incluir en <b>index.html</b>como funcionan las rutas <code>js/config.js</code></li>
+    <li>incluir en <b>index.html</b> la directiva <code> ng-view </code> para que cambie las vistas</li>
+</ol>
+
+
+<h3>Ejemplo Rutas</h3>
+<pre><code>
+
+        app.config( function( $routeProvider ){
+
+            $routeProvider
+              .when('/',{
+                  templateUrl: 'parciales/home.html'
+              })
+              .when('/alumnos',{
+                  templateUrl: 'parciales/alumnos.html'
+              })
+              .when('/profesores',{
+                  templateUrl: 'parciales/profesores.html'
+              })
+              .otherwise({
+                redirectTo: '/'
+              })
+          
+          })
+</code></pre>
+
+<h3>Ejemplo ruta con parámetros</h3>
+<p>
+
+</p>
+<ul>
+    <li><a ng-href="#!/detalle/3">Detalle reg 3</a></li>
+    <li><a ng-href="#!/detalle/11">Detalle reg 11</a></li>
+</ul>
+
+<div ng-controller="pokemonController">
+    <h2 class="text-danger">{{titulo}}</h2> <!--id del parametro que vamos a leer-->
+
+<table class="table">
+    <thead>
+      <tr>
+
+        <th scope="col">Nombre</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="pokemon in pokemons.results">
+        
+        <td> <a ng-href="#!/detalle/{{pokemon.name}}">{{pokemon.name}} </a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,51 @@
+{
+  "frutas": [
+    {
+      "id": 1,
+      "nombre": "manzana",
+      "color": "verde",
+      "precio": "10"
+    },
+    {
+      "id": 2,
+      "nombre": "pera",
+      "color": "verde",
+      "precio": "8"
+    },
+    {
+      "id": 3,
+      "nombre": "kiwi",
+      "color": "marron",
+      "precio": "6"
+    },
+    {
+      "id": 4,
+      "nombre": "naranja",
+      "color": "naranja",
+      "precio": "4"
+    },
+    {
+      "id": 5,
+      "nombre": "fresa",
+      "color": "rosa",
+      "precio": "2"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

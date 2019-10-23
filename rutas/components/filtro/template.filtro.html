@@ -1,0 +1,31 @@
+<HR>
+<h1>EJEMPLO FILTRO</h1>
+{{$ctrl.colores2}}
+<p><b>1.de un array en que se repites los colores para que solo se muestre una vez por color</b></p>
+    <p>*******COLORES sin repetirse:{{colores2}}<BR><br></p>
+
+<p><b>2.lo mismo con nombres</b></p>
+<p>*******NOMBRES DE FRUTAS SIN REPETIRSE DE LA DB.JS:{{nombres}}</p><br>
+
+<p><b>3.FILTRO DE FRUTAS POR COLORES DE LA BASE DE DATOS(db.js)</b></p>
+<p>*******nombre SIN REPETIRSE de frutas:{{frutasnombre}}</p><br>
+
+
+AQUI:{{frutascolores}}
+<HR>
+    <h1>EJEMPLO MAPPER</h1>
+    <p>aqui pueden repetirse los datos porque sacamos todos los datos</p>
+   
+<ol>
+   <li> <p><b>mapeo del colores de las frutas de la _____db.json____</b></p></li>
+    {{colores}}<BR><BR>
+    <li><p><b>mapeo del id de officerde un ____ARRAY____</b></p>
+    {{officersIds}}</li>
+</ol>
+
+    <HR>
+        <h1>EJEMPLO REDUCE</h1>
+        <p>te saca todo el array de precios dentro del ARRAY de frutas</p>
+        {{totalEuros}}<br><br>
+        <hr>
+    

@@ -1,0 +1,41 @@
+<h1>CRUD</h1>
+<div ng-controller="crudCtrl">
+
+<hr>
+prueba de que funciona el controler(recogemos valor) {{valor}}<BR>
+CANCIONES:{{canciones}}<BR><BR>
+  
+<hr>
+
+
+<strong>Busqueda:</strong>
+<input type="text" class="form-control" ng-model="busqueda.nombre" placeholder="busque por nombre de cancion">
+<br>
+
+<strong>Crea una Nueva Cancion:</strong>
+<input type="text" ng-model="nombre"class="form-control"  placeholder="Introduce una Nueva Cancion">
+<button type="button" ng-disabled="!nombre" ng-click="nuevaCancion(nombre)" class="btn btn-dark">Añadir Nueva Cancion <i class="far fa-plus-square"></i></button>
+<componente-alert clase="{{alerta.clase}}" texto="{{alerta.texto}}"></componente-alert>
+<componente-alert clase="{{alert.clase}}" texto="{{alert.texto}}"></componente-alert>
+
+<br><br>
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col-2">ID</th>
+        <th scope="col-2">NOMBRE CANCION</th>
+        <th scope="col-2">OPCIONES</th>
+   
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="cancion in canciones| filter:busqueda">
+        <td>{{cancion.id}}</i></td>
+        <td>{{cancion.nombre}}</td>
+        <td><i class="fas fa-edit" ng-click="editar(cancion)"></i><i class="fas fa-trash" ng-click="eliminar(cancion)"></i></td>
+      </tr>
+    
+    </tbody>
+  </table>
+</div>
